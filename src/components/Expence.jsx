@@ -11,10 +11,13 @@ const Expence = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center w-[700px] gap-3">
       {data.length > 0 ? (
         data.map((item, index) => (
-          <div key={index} className="flex">
+          <div
+            key={index}
+            className="flex items-center justify-between bg-zinc-700  py-2 px-4 w-full "
+          >
             <p>{item.name}</p>
             <p>{item.value}</p>
             <button onClick={() => handleDeleteEvent(index)}>Delete</button>

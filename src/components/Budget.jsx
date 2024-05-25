@@ -8,19 +8,19 @@ const Budget = () => {
     data.reduce((acc, curr) => acc + parseInt(curr.value), 0)
   );
   return (
-    <div>
-      <h1>My Budget Planner</h1>
-      <div>
-        <div className="flex border">
-          <h5>Budget:</h5>
+    <div className="flex flex-col gap-5 w-[700px] mb-10">
+      <h1 className=" font-bold">My Budget Planner</h1>
+      <div className="flex w-full justify-between">
+        <div className="flex border-2 p-5 gap-2">
+          <h5>Budget </h5>
           <p>Rs: {budget}</p>
         </div>
-        <div className="flex">
-          <h5>Remaining:</h5>
+        <div className="flex border-2 p-5 gap-2">
+          <h5>Remaining </h5>
           <p>Rs: {budget - total}</p>
         </div>
-        <div className="flex">
-          <h5>Spant:</h5>
+        <div className="flex border-2 p-5 gap-2">
+          <h5>Spent </h5>
           <p>Rs: {total}</p>
         </div>
       </div>
