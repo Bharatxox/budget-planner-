@@ -16,11 +16,13 @@ const Expence = () => {
         data.map((item, index) => (
           <div
             key={index}
-            className="flex items-center justify-between bg-zinc-700  py-2 px-4 w-full "
+            className="flex items-center  bg-zinc-700  py-2 px-4 w-full rounded-sm"
           >
-            <p>{item.name}</p>
-            <p>{item.value}</p>
-            <button onClick={() => handleDeleteEvent(index)}>Delete</button>
+            <p className="w-8/12 text-left">{item.name}</p>
+            <p className="w-2/12">{item.value}</p>
+            <button className="w-2/12" onClick={() => handleDeleteEvent(index)}>
+              Delete
+            </button>
           </div>
         ))
       ) : (
